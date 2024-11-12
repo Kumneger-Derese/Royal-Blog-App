@@ -2,7 +2,7 @@ import UserModel from '../models/userModel.js';
 import asyncHandler from 'express-async-handler';
 import { generateToken } from '../utils/generateToken.js';
 
-//Todo:  Post | Public | api/users/register
+//Todo:  Post | Public | /api/users/register
 
 const registerUser = asyncHandler(async (req, res) => {
   const { name, email, password } = req.body;
