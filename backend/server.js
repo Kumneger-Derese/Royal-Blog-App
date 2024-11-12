@@ -8,12 +8,12 @@ import blogRoute from './routes/blogRoute.js';
 import commentRoute from './routes/commentRoute.js';
 import emailRoute from './routes/emailRoute.js';
 
-import { loadEnvFile } from 'process';
 import { GreenLog } from './utils/Logger.js';
 import { errorHandler, notFound } from './middleware/error/errorMiddleware.js';
+import dotenv from 'dotenv';
 
 //* Db and .env config
-loadEnvFile('./.env');
+dotenv.config();
 connectDB();
 
 const app = express();
