@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-gradient {
+  color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(
+    45deg,
+    #c49c6e,
+    rgb(255, 158, 47),
+    #33dd5b,
+    #0f795f,
+    #1d72fb,
+    #9547e3,
+    rgb(255, 158, 47),
+    rgb(255, 158, 47)
+  );
+}
+
+.bg-gradient {
+  background-image: linear-gradient(340deg, #4f3204, #9e6407);
+}
+
+.bg-gradient-2 {
+  background-image: linear-gradient(50deg, #4f3204, #9e6407);
+}
+.btn-shadow {
+  box-shadow: 0px 0px 20px white;
+  &:hover {
+    box-shadow: 0px 0px 20px black;
+  }
+}
+.box-shadow-gold {
+  box-shadow: 0 0 24px #ca7e04;
+  &:hover {
+    box-shadow: 0 0 24px #ffe8c3;
+  }
+}
+
+/*For firefox*/
+/* html {
+  scrollbar-width: thin;
+  scrollbar-color: #9e6407, #4f3204;
+} */
+
+/*For others*/
+html::-webkit-scrollbar,
+.search {
+  width: 1vw;
+}
+html::-webkit-scrollbar-thumb,
+.search {
+  background-color: #c07805;
+  border-radius: 8px;
+}
+html::-webkit-scrollbar-track,
+.search {
+  background-image: linear-gradient(340deg, #4f3204, #9e6407);
+}
