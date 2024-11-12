@@ -1,4 +1,9 @@
 import multer from 'multer';
+import fs from 'node:fs';
+
+if (!fs.existsSync('./public')) {
+  fs.mkdirSync('./public');
+}
 
 //Todo: multer multipart file handler setup.
 const storage = multer.diskStorage({
