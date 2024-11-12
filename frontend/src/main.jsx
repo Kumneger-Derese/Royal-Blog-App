@@ -62,7 +62,12 @@ const router = createBrowserRouter(
 // root app and global state
 ReactDOM.createRoot(document.getElementById('root')).render(
   <Provider store={store}>
-    <QueryClientProvider client={queryClient}>
+    <QueryClientProvider
+      client={queryClient}
+      future={{
+        v7_startTransition: true,
+      }}
+    >
       <React.StrictMode>
         <RouterProvider router={router} />
       </React.StrictMode>
