@@ -34,18 +34,20 @@ export default function NavBar() {
       </section>
 
       <div className='hidden md:block'>
-        {userInfo ? (
+        {userInfo && (
           <section className='flex gap-4'>
             <Link to={'/blogs'}>Posts</Link>
             <Link to={'/create'}>Create</Link>
             <Link to={'/following'}>Following</Link>
           </section>
-        ) : (
-          <section className='flex gap-4'>
-            <Link to={'/login'}>Login</Link>
-          </section>
         )}
       </div>
+
+      {!userInfo && (
+        <section className='flex gap-4'>
+          <Link to={'/login'}>Login</Link>
+        </section>
+      )}
 
       {userInfo && (
         <section className='relative '>
