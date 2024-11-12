@@ -2,8 +2,6 @@ import { HiBookOpen } from 'react-icons/hi2';
 import { Link } from 'react-router-dom';
 
 const BlogCard = ({ blog }) => {
-  console.log(blog);
-
   return (
     <div
       key={blog._id}
